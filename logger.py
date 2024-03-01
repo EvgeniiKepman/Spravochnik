@@ -73,7 +73,7 @@ def select_record(records):
     selection = int(input("Выберите номер записи: ")) - 1
     return records[selection]
 
-def update_delete_common_flow(variant, action):
+def update_delete(variant, action):
     filename = 'data_first_variant.csv' if variant == 1 else 'data_second_variant.csv'
     name = input("Введите имя: ")
     surname = input("Введите фамилию: ")
@@ -104,8 +104,8 @@ def update_delete_common_flow(variant, action):
 
 def update_data():
     variant = int(input("В каком файле вы хотите изменить данные? 1 - Первый вариант, 2 - Второй вариант: "))
-    update_delete_common_flow(variant, "update")
+    update_delete(variant, "update")
 
 def delete_data():
     variant = int(input("В каком файле вы хотите удалить данные? 1 - Первый вариант, 2 - Второй вариант: "))
-    update_delete_common_flow(variant, "delete")
+    update_delete(variant, "delete")
